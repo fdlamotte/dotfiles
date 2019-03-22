@@ -1,0 +1,188 @@
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!                                                                          !!
+!!	      	   	   User Specific Settings                           !!
+!!                                                                          !!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!                                                                          !!
+!! 	File: 		~/.Xdefaults                                        !!
+!! 	Version:	0.95                                                !!
+!! 	Last modified: 	                                                    !!
+!!                                                                          !!
+!! 	By who:		Eric Masson                                         !!
+!! 	Contact:	maxxi.desktop@gmail.com                             !!
+!!                                                                          !!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!                                                                          !!
+!!                           SGI Scheme Engine                              !!
+!!                                                                          !!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!       
+
+!!
+!!#define GAMMA_1_7
+!!#define USE_COLORS
+!!#define USE_SPACING
+!!#define USE_FONTS
+!!#include "/opt/MaXX/share/X11/schemes/Base/FontPalette"
+!!#include "/opt/MaXX/share/X11/schemes/IndigoMagic/BaseColorPalette"
+!!#include "/opt/MaXX/share/X11/schemes/Base/Base"
+	
+
+!! This is a temporary solution while waiting for the completion of the     !!
+!! real Scheme Engine.                                                      !!
+!!                                                                          !!
+!! IMPORTANT:                                                               !!
+!!       In order to get all scheme definitions to load properly, insert    !!
+!!       at the top of your ~/.xinitrc file, the following command:         !!
+!!	 xrdb ~/.Xdefault                                                   !!
+!!                                                                          !!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+*dpi: 96
+Xft.dpi:96
+
+
+        *toolchest.clientDecoration:    title -border
+        *toolchest.clientFunctions:     -resize -minimize -maximize
+        *ToolChest.clientDecoration:    title -border
+        *ToolChest.clientFunctions:     -resize -minimize -maximize
+!	*toolchest*renderTable:                      xft
+!	*toolchest*xft*fontType:                     FONT_IS_XFT
+!	*toolchest*xft*fontName:                     Sans-8
+!	*toolchest*xft*fontSize:                     8
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!
+!! New cursor resources for Desktop, ViewKit and MaXX Desktop based applications.
+!!
+!!  *pointerColor: 		the foreground color
+!!  *pointerColorBackground: 	the background or the border
+!!
+!! The default (fallback) colors for the foreground and backround are red 
+!! and white respectively.  Both 5Dwm and toolchest make used of these 
+!! resources to setup their cursors appearance.  All MaXX applications
+!! will make used of these resources to garanty an even look and feel.
+!
+	*pointerColor:			red
+	*pointerColorBackground:	white
+	*darkBackground:		true
+
+	*scheme:			IndigoMagic
+	Xcursor.theme: 		 	redSGI
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!                                                                         !!
+!! 	         USER OVERRIDE for 5DWM WINDOWS MANAGER Settings           !!
+!!                                                                         !!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+	*rootButtonClick:		True
+	*showFeedback:			move placement restart quit
+!	*keyboardFocusPolicy:		explicit
+	*keyboardFocusPolicy:		pointer
+!	*interactivePlacement:		False
+	*freezeOnConfig:		False
+	*moveOpaque:			True
+	*sessionClientDB:		.mwmclientbd
+        *useIconBox:                   false
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!
+!! Generic Motif Widgets Settings
+!
+        *XmScale.highlightThickness:           0
+!	*XmScrolledWindow.borderWidth:      1
+
+	*XmMessageBox*XmScale.slidingMode:  XmTHERMOMETER
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!                                                                         !!
+!!            X11 Application Specific Settings (client)                   !!
+!!                                                                         !!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!
+!	*renderTable:                      xft
+!	*xft*fontType:                     FONT_IS_XFT
+!	*xft*fontName:                     Sans-8
+
+       *toolchest*fontList:            -adobe-helvetica-bold-o-normal--14-*
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!	
+!! XTerm, winterm, gnome-terminal Settings
+!
+
+	*XTerm*saveLines:		5000
+	*XTerm*scrollBar:		False
+	*XTerm*background:		#050530
+	*XTerm*foreground:		#eeeeee
+	*XTerm*cursorColor:		yellow
+
+	URxvt*saveLines:		5000
+	URxvt*scrollBar:		False
+	URxvt*background:		#141414
+	URxvt*foreground:		#ecebbe
+	URxvt*cursorColor:		orange
+!	URxvt*font:	9x15
+!	URxvt*font: xft:DejaVu Sans Mono:pixelsize=12:antialias=true
+	URxvt.font: 	  -*-terminus-medium-r-normal-*-17-*-*-*-*-*-iso8859-* 
+	URxvt.boldFont:   -*-terminus-bold-r-normal-*-17-*-*-*-*-*-iso8859-* 
+	URxvt.italicFont: -*-terminus-medium-o-normal-*-17-*-*-*-*-*-iso8859-* 
+	URxvt.iconFile: /usr/share/icons/gnome/16x16/apps/utilities-terminal.png
+
+	st.font: 	  -*-terminus-medium-r-normal-*-17-*-*-*-*-*-iso8859-*
+! Normal
+! ! color0    black
+! ! color1    red
+! ! color2    green
+! ! color3    yellow
+! ! color4    blue
+! ! color5    purple
+! ! color6    cyan
+! ! color7    white
+
+! urxvt*color0:    #6c6c6c
+! urxvt*color1:    #ff5656
+! urxvt*color2:    #b6e77d
+ urxvt*color3:    #ffee50
+ urxvt*color4:    #5A98B2
+ urxvt*color5:    #e04dff
+ urxvt*color6:    #94D8D8
+! urxvt*color7:    #f2f2f2
+
+! ! Light
+! ! color8    black
+! ! color9    red
+! ! color10    green
+! ! color11    yellow
+! ! color12    blue
+! ! color13    purple
+! ! color14    cyan
+! ! color15    white
+
+! urxvt*color8:    #747474
+ urxvt*color9:    #ff5656
+! urxvt*color10:    #c3f786
+ urxvt*color11:    #ffef80
+ urxvt*color12:    #5AA4FF
+ urxvt*color13:    #e773ff
+ urxvt*color14:    #6ed7d7
+! urxvt*color15:    #e2e2e2
+
+
+	*xclock*clock*background:	#111122
+	*xclock*clock*minorColor:	white
+	*xclock*clock*majorColor:	white
+	*xclock*clock*minuteColor:	white
+	*xclock*clock*hourColor:	white
+
+
+
+! end of .Xdefaults
