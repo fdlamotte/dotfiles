@@ -1,0 +1,64 @@
+set $mod Mod4
+set $term lxterminal
+set $fm	nemo
+
+####################
+# Startup commands
+####################
+workspace term
+exec_always --no-startup-id xrdb -merge ~/.Xdefaults
+exec exec swayidle timeout 900 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"'
+exec "exec $term"
+
+####################
+# Input configuration
+####################
+input * {
+	xkb_layout fr
+	xkb_variant oss
+}
+
+# scroll on trackpoint move while center button pressed
+input 1102:4639:DELL081C:00_044E:121F_Mouse scroll_method on_button_down
+
+floating_modifier $mod
+
+####################
+# Output configuration
+####################
+output 'Iiyama North America XB2776QS-B1 1120932100339' position 0 0
+output 'Dell Inc. DELL 2007FP MY54672Q0RGL' transform 270 position 2560 0
+
+workspace Web output 'Iiyama North America XB2776QS-B1 1120932100339'
+workspace Work output 'Iiyama North America XB2776QS-B1 1120932100339'
+workspace Term output 'Chimei Innolux Corporation 0x14D3 0x00000000'
+workspace Mail output 'Dell Inc. DELL 2007FP MY54672Q0RGL'
+workspace Cal output 'Chimei Innolux Corporation 0x14D3 0x00000000'
+
+####################
+# rendering configuration
+####################
+font pango:DejaVu Sans Mono 9
+titlebar_border_thickness 1
+titlebar_padding 6 1
+default_border pixel 2
+hide_edge_borders none
+workspace_layout tabbed
+workspace_auto_back_and_forth no
+
+####################
+# Key bindings
+####################
+include bindings.conf
+
+####################
+# Bar configuration
+####################
+include bar_config.conf
+
+####################
+# Specific windows configuration
+####################
+include window_config.conf
+
+
