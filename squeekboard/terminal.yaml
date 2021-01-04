@@ -1,0 +1,160 @@
+---
+outlines:
+    default: { width: 45, height: 50 }
+    menu: { width: 45, height: 50 }
+    altline: { width: 68, height: 50 }
+    spaceline: { width: 135, height: 50 }
+    special: { width: 45, height: 50 }
+    action: { width: 55, height: 35 }
+    fkey: { width: 45, height: 50 }
+
+views:
+    base:
+        - "Esc Ctrl Alt PgUp PgDn ← ↑ ↓ →"
+        - "# 1 2 3 4 5 6 7 8 9 0"
+        - "Tab a z e r t y u i o p"
+        - "_ q s d f g h j k l m"
+        - "Shift_L   w x c v b n : -  BackSpace"
+        - "show_symbols < > @ space . / Return"
+    caps:
+        - "Esc Ctrl Alt PgUp PgDn ← ↑ ↓ →"
+        - "# 1 2 3 4 5 6 7 8 9 0"
+        - "Tab A Z E R T Y U I O P"
+        - "_ Q S D F G H J K L M"
+        - "show_letters   W X C V B N : -  BackSpace"
+        - "show_symbols < > @ space . / Return"
+    upper:
+        - "Esc Ctrl Alt Home End ← ↑ ↓ →"
+        - "& é è à ù ë ô ê œ ç µ"
+        - "\" A Z E R T Y U I O P"
+        - "' Q S D F G H J K L M"
+        - "Shift_L W X C V B N ; + BackSpace"
+        - "show_caps preferences Menu | space , \\ Return"
+    symbols:
+        - "Esc Ctrl Alt Home End ← ↑ ↓ →"
+        - "F1 F2  F3  F4  1 2 3 + $ € §"
+        - "F5 F6  F7  F8  4 5 6 - ~ ` ´"
+        - "F9 F10 F11 F12 7 8 9 * % ^ °" 
+        - "Del [   ]   {  } . 0 / = BackSpace"
+        - "show_letters preferences ( ) space ? ! Return"
+
+buttons:
+    Shift_L:
+        action:
+            locking:
+                lock_view: "upper"
+                unlock_view: "base"
+        outline: "altline"
+        icon: "key-shift"
+    Ctrl:
+        modifier: "Control"
+        outline: "action"
+        label: "Ctrl"
+    Alt:
+        modifier: "Alt"
+        outline: "action"
+        label: "Alt"
+    BackSpace:
+        outline: "altline"
+        icon: "edit-clear-symbolic"
+        action: "erase"
+    Menu:
+        outline: "special"
+        keysym: "Menu"
+        label: "Mn"
+    preferences:
+        action: "show_prefs"
+        outline: "special"
+        icon: "keyboard-mode-symbolic"
+    show_letters:
+        action:
+            set_view: "base"
+        outline: "altline"
+        label: "abc"
+    show_caps:
+        action:
+            set_view: "caps"
+        outline: "altline"
+        label: "ABC"
+    show_symbols:
+        action:
+            set_view: "symbols"
+        outline: "altline"
+        label: "123"
+    space:
+        outline: "spaceline"
+        label: " "
+        text: " "
+    Return:
+        outline: "altline"
+        icon: "key-enter"
+        keysym: "Return"
+    F1:
+        outline: "fkey"
+        keysym: "F1"
+    F2:
+        outline: "fkey"
+        keysym: "F2"
+    F3:
+        outline: "fkey"
+        keysym: "F3"
+    F4:
+        outline: "fkey"
+        keysym: "F4"
+    F5:
+        outline: "fkey"
+        keysym: "F5"
+    F6:
+        outline: "fkey"
+        keysym: "F6"
+    F7:
+        outline: "fkey"
+        keysym: "F7"
+    F8:
+        outline: "fkey"
+        keysym: "F8"
+    F9:
+        outline: "fkey"
+        keysym: "F9"
+    F10:
+        outline: "fkey"
+        keysym: "F10"
+    F11:
+        outline: "fkey"
+        keysym: "F11"
+    F12:
+        outline: "fkey"
+        keysym: "F12"
+    Esc:
+        outline: "action"
+        keysym: "Escape"
+    Home:
+        outline: "action"
+        keysym: "Home"
+    End:
+        outline: "action"
+        keysym: "End"
+    Del:
+        outline: "altline"
+        keysym: "Delete"
+    PgUp:
+        outline: "action"
+        keysym: "Page_Up"
+    PgDn:
+        outline: "action"
+        keysym: "Page_Down"
+    Tab:
+        outline: "special"
+        keysym: "Tab"
+    "↑":
+        outline: "action"
+        keysym: "Up"
+    "↓":
+        outline: "action"
+        keysym: "Down"
+    "←":
+        outline: "action"
+        keysym: "Left"
+    "→":
+        outline: "action"
+        keysym: "Right"
